@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Ranju 💖</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        font-family: 'Comic Sans MS', cursive;
+        background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 30px;
+        border-radius: 25px;
+        width: 90%;
+        max-width: 420px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        animation: fadeIn 1s ease;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px 22px;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        background: #ff6f91;
+        color: white;
+        transition: transform 0.2s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    .btn-row button {
+        margin: 10px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/10/25/audio_8b7d2c2e5c.mp3?filename=music-mist-ambient-rainy-circle-124748.mp3" type="audio/mp3">
+</audio>
+
+<div class="card" id="content">
+    <h2>Tap to start 💗</h2>
+    <p>(Trust me)</p>
+    <button onclick="start()">Tap 💖</button>
+</div>
+
+<script>
+const content = document.getElementById("content");
+const music = document.getElementById("bgMusic");
+
+function start() {
+    music.play();
+    step1();
+}
+
+function step1() {
+    content.innerHTML = `
+        <h3>Okay first of all… Hi 🤭</h3>
+        <p>You’re stuck here now 😗</p>
+        <button onclick="step2()">Tap to continue</button>
+    `;
+}
+
+// **Be honest + annoying question**
+function step2() {
+    content.innerHTML = `
+        <h3>Be honest 👀</h3>
+        <h3>I’m annoying but you like it right? 😌</h3>
+        <div class="btn-row">
+            <button onclick="step3()">Absolutely babyyy ❤️</button>
+            <button onclick="hange()">No</button>
+        </div>
+    `;
+}
+
+function hange() {
+    content.innerHTML = `
+        <p>Ohhhhhhhhhhhhhh hange 👏🏻👏🏻👏🏻</p>
+        <p>mmmhmmmhmmhmm</p>
+        <p>Illa illa irli irli bidi ✋🏻</p>
+        <p>Illa shhhh it’s okay.</p>
+        <p>Sorry kshamsbidi 🙏🏻</p>
+        <p>Ey ✋🏻 shh irli</p>
+        <button onclick="step3()">Okay okay enough drama</button>
+    `;
+}
+
+// **Big surprises / talk too much part**
+function step3() {
+    content.innerHTML = `
+        <h3>I don’t need big surprises… I need you ❤️</h3>
+        <p>I know I’m annoying and talk too much.</p>
+        <p>I overthink.</p>
+        <p>But still… you chose me.</p>
+        <p>And that means EVERYTHING to me 🥹❤️</p>
+        <button onclick="step4()">Tap to continue</button>
+    `;
+}
+
+// **Serious face / drama**
+function step4() {
+    content.innerHTML = `
+        <h3>Okay okay enough drama.</h3>
+        <p>Focus.</p>
+        <p><b>Serious face.</b></p>
+        <p>(Stop smiling like that 😏)</p>
+        <button onclick="step5()">Tap to continue</button>
+    `;
+}
+
+// **Valentine question**
+function step5() {
+    content.innerHTML = `
+        <h3>Will you be my Valentine 💌</h3>
+        <p>Today, tomorrow and forever?</p>
+        <div class="btn-row">
+            <button onclick="yes()">Yes ❤️</button>
+            <button onclick="hange()">No</button>
+        </div>
+    `;
+}
+
+// **Ending**
+function yes() {
+    content.innerHTML = `
+        <h2>I knew it 😌❤️</h2>
+        <p>I love you.</p>
+        <p>— your baby 💕</p>
+    `;
+}
+</script>
+
+</body>
+</html>
